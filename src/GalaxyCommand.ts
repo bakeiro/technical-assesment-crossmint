@@ -1,21 +1,10 @@
 import type { GalaxyEntityBuilder } from "./GalaxyEntityBuilder.ts";
-
-// Types
-type CommandType = "create" | "delete";
-type EntityType = "polyanet" | "soloon" | "cometh";
-
-interface CommandParams {
-  [key: string]: string;
-}
-
-interface ExecutionResult {
-  success: boolean;
-  data?: any;
-  status?: number;
-  headers?: any;
-  error?: any;
-  message?: string;
-}
+import type {
+  CommandType,
+  EntityType,
+  CommandParams,
+  ExecutionResult
+} from "../types/types.ts";
 
 /**
  * GalaxyCommand class representing a single command to execute in the galaxy

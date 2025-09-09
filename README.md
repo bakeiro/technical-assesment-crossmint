@@ -1,14 +1,11 @@
 # Small API Project (Overview)
 
-A Deno project that builds a "galaxy map" by interacting with an API. Starting from a map (JSON), the system analyzes it, generates construction commands (create/delete cosmic entities) and executes them with retry handling.
+A JS project (using Deno) that builds a "megaverses" by interacting with the megaverse creator API. Starting from a map, the system analyzes it, generates construction commands (create/delete cosmic entities) and executes them with retry handling logic included.
 
 ## Deno in this project
 - Requires Deno installed: https://deno.land/
 - No dependency installation needed: Deno resolves them on-the-fly
-- Direct execution:
-```bash
-deno run -A main.js
-```
+- Direct execution: `deno run -A main.js`
 
 ## Project structure
 ```

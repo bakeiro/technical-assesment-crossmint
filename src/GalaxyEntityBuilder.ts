@@ -1,35 +1,14 @@
 import sanitizer from "sanitize-html";
 import axios from "axios";
-
-// Types
-type HttpMethod = "post" | "delete";
-
-type SoloonColor = "blue" | "red" | "purple" | "white";
-type ComethDirection = "up" | "down" | "left" | "right";
-
-interface RequestData {
-  candidateId: string;
-  row: number;
-  column: number;
-  [key: string]: any;
-}
-
-interface ApiResponse {
-  success: boolean;
-  data?: any;
-  status?: number;
-  headers?: any;
-  error?: any;
-  message?: string;
-}
-
-interface SoloonParams {
-  color: SoloonColor;
-}
-
-interface ComethParams {
-  direction: ComethDirection;
-}
+import type {
+  HttpMethod,
+  SoloonColor,
+  ComethDirection,
+  RequestData,
+  ApiResponse,
+  SoloonParams,
+  ComethParams
+} from "../types/types.ts";
 
 /**
  * GalaxyEntityBuilder class for managing galaxy entities (Polyanets, Soloons, Comeths)

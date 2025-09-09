@@ -1,17 +1,9 @@
 import type { GalaxyCommand } from "./GalaxyCommand.ts";
 import type { GalaxyEntityBuilder } from "./GalaxyEntityBuilder.ts";
-
-// Types
-interface ExecutionOptions {
-  mockCalls?: boolean;
-}
-
-interface CommandExecutionResult {
-  success: boolean;
-  shouldAbort: boolean;
-  result?: any;
-  error?: string;
-}
+import type {
+  ExecutionOptions,
+  CommandExecutionResult
+} from "../types/types.ts";
 
 /**
  * GalaxyQueueDispatcher class for executing galaxy construction commands

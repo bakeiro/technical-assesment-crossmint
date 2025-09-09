@@ -1,37 +1,11 @@
 import { GalaxyCommand } from "./GalaxyCommand.ts";
-
-// Types
-type CellType = 
-  | null 
-  | undefined 
-  | "SPACE"
-  | "POLYANET" 
-  | "BLUE_SOLOON" 
-  | "RED_SOLOON" 
-  | "PURPLE_SOLOON" 
-  | "WHITE_SOLOON"
-  | "UP_COMETH" 
-  | "DOWN_COMETH" 
-  | "LEFT_COMETH" 
-  | "RIGHT_COMETH";
-
-type GalaxyMap = CellType[][];
-
-interface MapData {
-  description: string;
-  size: {
-    rows: number;
-    columns: number;
-  };
-  map: GalaxyMap;
-}
-
-interface EntityMapping {
-  entity: "polyanet" | "soloon" | "cometh";
-  params: Record<string, string>;
-}
-
-type EntityMappings = Record<string, EntityMapping>;
+import type { 
+  CellType,
+  GalaxyMap,
+  MapData,
+  EntityMapping,
+  EntityMappings
+} from "../types/types.ts";
 
 const CELL_TO_ASCII: Record<string, string> = {
   "null": ".",
