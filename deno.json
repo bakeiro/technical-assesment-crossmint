@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": false,
+    "proseWrap": "preserve"
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-env main.js",
+    "dev": "deno run --allow-net --allow-env --watch main.js",
+    "test": "deno test --allow-net tests/"
+  },
+  "imports": {
+    "axios": "https://deno.land/x/axiod@0.26.2/mod.ts",
+    "sanitize-html": "npm:sanitize-html@^2.17.0"
+  }
+}
